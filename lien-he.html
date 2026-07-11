@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Liên hệ — YHCT Tâm Đức</title>
+  <meta name="description" content="Liên hệ phòng khám Y học cổ truyền Tâm Đức: địa chỉ, số điện thoại, giờ làm việc và bản đồ." />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Serif:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="sticky top-0 z-40 border-b border-brand-100 bg-white/90 backdrop-blur">
+    <nav class="container-narrow flex items-center justify-between py-3">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="assets/img/logo.svg" alt="Logo Tâm Đức" class="h-10 w-10" />
+        <span class="font-serif text-lg font-bold leading-tight text-brand-800">
+          YHCT Tâm Đức<span class="block text-xs font-normal text-brand-500">Y học cổ truyền</span>
+        </span>
+      </a>
+      <button data-nav-toggle aria-expanded="false" aria-label="Mở menu"
+        class="inline-flex items-center rounded-md p-2 text-brand-700 hover:bg-brand-100 md:hidden">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
+      </button>
+      <div data-nav-menu class="hidden w-full md:flex md:w-auto md:items-center md:gap-1">
+        <div class="mt-3 flex flex-col gap-1 md:mt-0 md:flex-row md:items-center">
+          <a href="index.html" class="nav-link">Trang chủ</a>
+          <a href="gioi-thieu.html" class="nav-link">Giới thiệu</a>
+          <a href="dich-vu.html" class="nav-link">Dịch vụ</a>
+          <a href="khai-benh.html" class="nav-link">Khai bệnh</a>
+          <a href="lien-he.html" class="nav-link">Liên hệ</a>
+          <a href="khai-benh.html" class="btn-primary md:ml-3">Đặt lịch / Khai bệnh</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="bg-brand-100">
+      <div class="container-narrow py-14">
+        <span class="eyebrow">Liên hệ</span>
+        <h1 class="section-title">Liên hệ với chúng tôi</h1>
+        <p class="mt-3 max-w-2xl text-brand-700">Gọi điện, nhắn tin hoặc ghé thăm phòng khám. Chúng tôi luôn sẵn sàng hỗ trợ bạn.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container-narrow grid gap-10 lg:grid-cols-2">
+        <div class="space-y-6">
+          <div class="card flex items-start gap-4">
+            <span class="text-2xl">📍</span>
+            <div>
+              <h3 class="text-lg font-semibold">Địa chỉ</h3>
+              <p class="mt-1 text-sm text-brand-700">[[Số nhà, đường, phường, quận, thành phố]]</p>
+            </div>
+          </div>
+          <div class="card flex items-start gap-4">
+            <span class="text-2xl">📞</span>
+            <div>
+              <h3 class="text-lg font-semibold">Điện thoại / Zalo</h3>
+              <p class="mt-1 text-sm text-brand-700"><a href="tel:[[SODT]]" class="hover:text-brand-900">[[Số điện thoại]]</a></p>
+            </div>
+          </div>
+          <div class="card flex items-start gap-4">
+            <span class="text-2xl">✉️</span>
+            <div>
+              <h3 class="text-lg font-semibold">Email</h3>
+              <p class="mt-1 text-sm text-brand-700"><a href="mailto:[[EMAIL]]" class="hover:text-brand-900">[[email@phongkham.vn]]</a></p>
+            </div>
+          </div>
+          <div class="card flex items-start gap-4">
+            <span class="text-2xl">🕒</span>
+            <div>
+              <h3 class="text-lg font-semibold">Giờ làm việc</h3>
+              <p class="mt-1 text-sm text-brand-700">Thứ 2 – Thứ 7: [[7:30 – 20:00]]<br />Chủ nhật: [[7:30 – 12:00]]</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="space-y-6">
+          <!-- Bản đồ: thay src bằng mã nhúng Google Maps của phòng khám -->
+          <div class="aspect-video w-full overflow-hidden rounded-2xl bg-brand-200/60 ring-1 ring-brand-200">
+            <div class="flex h-full w-full items-center justify-center text-sm text-brand-600">
+              [[Nhúng Google Maps tại đây — thay khối này bằng &lt;iframe&gt; bản đồ]]
+            </div>
+          </div>
+          <div class="card">
+            <h3 class="text-lg font-semibold">Cần tư vấn nhanh?</h3>
+            <p class="mt-2 text-sm text-brand-700">Bạn có thể khai bệnh trực tuyến để phòng khám nắm thông tin trước.</p>
+            <a href="khai-benh.html" class="btn-primary mt-4">Khai bệnh trực tuyến</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-brand-100 bg-white">
+    <div class="container-narrow grid gap-8 py-12 sm:grid-cols-2 lg:grid-cols-3">
+      <div>
+        <div class="flex items-center gap-3">
+          <img src="assets/img/logo.svg" alt="Logo Tâm Đức" class="h-9 w-9" />
+          <span class="font-serif text-lg font-bold text-brand-800">YHCT Tâm Đức</span>
+        </div>
+        <p class="mt-3 text-sm text-brand-600">Phòng khám Y học cổ truyền — chăm sóc sức khỏe bằng phương pháp Đông y an toàn, tận tâm.</p>
+      </div>
+      <div>
+        <h3 class="text-sm font-semibold uppercase tracking-wide text-brand-800">Liên hệ</h3>
+        <ul class="mt-3 space-y-2 text-sm text-brand-600">
+          <li>📍 [[Địa chỉ phòng khám]]</li>
+          <li>📞 <a href="tel:[[SODT]]" class="hover:text-brand-800">[[Số điện thoại]]</a></li>
+          <li>✉️ <a href="mailto:[[EMAIL]]" class="hover:text-brand-800">[[email@phongkham.vn]]</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-sm font-semibold uppercase tracking-wide text-brand-800">Giờ làm việc</h3>
+        <ul class="mt-3 space-y-1 text-sm text-brand-600">
+          <li>Thứ 2 – Thứ 7: [[7:30 – 20:00]]</li>
+          <li>Chủ nhật: [[7:30 – 12:00]]</li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-brand-100 py-4 text-center text-xs text-brand-500">
+      © <span data-year>2026</span> YHCT Tâm Đức. Bảo lưu mọi quyền.
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
