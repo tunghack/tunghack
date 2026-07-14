@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Khai bệnh trực tuyến — YHCT Tâm Đức</title>
+  <meta name="description" content="Khai bệnh trực tuyến tại phòng khám Y học cổ truyền Tâm Đức. Điền thông tin triệu chứng để được tư vấn và đặt lịch khám." />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Serif:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="sticky top-0 z-40 border-b border-brand-100 bg-white/90 backdrop-blur">
+    <nav class="container-narrow flex items-center justify-between py-3">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="assets/img/logo.svg" alt="Logo Tâm Đức" class="h-10 w-10" />
+        <span class="font-serif text-lg font-bold leading-tight text-brand-800">
+          YHCT Tâm Đức<span class="block text-xs font-normal text-brand-500">Y học cổ truyền</span>
+        </span>
+      </a>
+      <button data-nav-toggle aria-expanded="false" aria-label="Mở menu"
+        class="inline-flex items-center rounded-md p-2 text-brand-700 hover:bg-brand-100 md:hidden">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
+      </button>
+      <div data-nav-menu class="hidden w-full md:flex md:w-auto md:items-center md:gap-1">
+        <div class="mt-3 flex flex-col gap-1 md:mt-0 md:flex-row md:items-center">
+          <a href="index.html" class="nav-link">Trang chủ</a>
+          <a href="gioi-thieu.html" class="nav-link">Giới thiệu</a>
+          <a href="dich-vu.html" class="nav-link">Dịch vụ</a>
+          <a href="khai-benh.html" class="nav-link">Khai bệnh</a>
+          <a href="lien-he.html" class="nav-link">Liên hệ</a>
+          <a href="khai-benh.html" class="btn-primary md:ml-3">Đặt lịch / Khai bệnh</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="bg-brand-100">
+      <div class="container-narrow py-14">
+        <span class="eyebrow">Khai bệnh trực tuyến</span>
+        <h1 class="section-title">Phiếu khai bệnh</h1>
+        <p class="mt-3 max-w-2xl text-brand-700">
+          Vui lòng điền đầy đủ thông tin bên dưới. Phòng khám sẽ dựa vào thông tin này để tư vấn
+          và chuẩn bị trước cho buổi khám. Các trường có dấu <span class="text-red-500">*</span> là bắt buộc.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container-narrow max-w-3xl">
+        <div id="form-status" class="hidden" role="status" aria-live="polite"></div>
+
+        <form id="khai-benh-form" novalidate class="space-y-10">
+          <fieldset class="card">
+            <legend class="fieldset-legend"><span>1.</span> Thông tin cá nhân</legend>
+            <div class="grid gap-4 sm:grid-cols-2">
+              <div>
+                <label class="field-label field-required" for="ho_ten">Họ và tên</label>
+                <input class="field-input" id="ho_ten" name="ho_ten" type="text" required autocomplete="name" placeholder="Nguyễn Văn A" />
+                <p class="field-error">Vui lòng nhập họ và tên.</p>
+              </div>
+              <div>
+                <label class="field-label field-required" for="so_dien_thoai">Số điện thoại</label>
+                <input class="field-input" id="so_dien_thoai" name="so_dien_thoai" type="tel" required autocomplete="tel" placeholder="09xx xxx xxx" />
+                <p class="field-error">Vui lòng nhập số điện thoại hợp lệ.</p>
+              </div>
+              <div>
+                <label class="field-label" for="gioi_tinh">Giới tính</label>
+                <select class="field-input" id="gioi_tinh" name="gioi_tinh">
+                  <option value="">-- Chọn --</option>
+                  <option>Nam</option>
+                  <option>Nữ</option>
+                  <option>Khác</option>
+                </select>
+              </div>
+              <div>
+                <label class="field-label" for="ngay_sinh">Ngày sinh</label>
+                <input class="field-input" id="ngay_sinh" name="ngay_sinh" type="date" />
+              </div>
+              <div>
+                <label class="field-label" for="email">Email</label>
+                <input class="field-input" id="email" name="email" type="email" autocomplete="email" placeholder="email@example.com" />
+              </div>
+              <div>
+                <label class="field-label" for="nghe_nghiep">Nghề nghiệp</label>
+                <input class="field-input" id="nghe_nghiep" name="nghe_nghiep" type="text" />
+              </div>
+              <div class="sm:col-span-2">
+                <label class="field-label" for="dia_chi">Địa chỉ</label>
+                <input class="field-input" id="dia_chi" name="dia_chi" type="text" autocomplete="street-address" />
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="card">
+            <legend class="fieldset-legend"><span>2.</span> Lý do khám</legend>
+            <div class="grid gap-4">
+              <div>
+                <label class="field-label field-required" for="trieu_chung">Triệu chứng chính</label>
+                <textarea class="field-input" id="trieu_chung" name="trieu_chung" rows="3" required placeholder="Mô tả triệu chứng bạn đang gặp phải..."></textarea>
+                <p class="field-error">Vui lòng mô tả triệu chứng chính.</p>
+              </div>
+              <div class="grid gap-4 sm:grid-cols-2">
+                <div>
+                  <label class="field-label" for="thoi_gian_mac">Thời gian mắc bệnh</label>
+                  <input class="field-input" id="thoi_gian_mac" name="thoi_gian_mac" type="text" placeholder="VD: 2 tuần, 3 tháng..." />
+                </div>
+                <div>
+                  <label class="field-label" for="muc_do">Mức độ</label>
+                  <select class="field-input" id="muc_do" name="muc_do">
+                    <option value="">-- Chọn --</option>
+                    <option>Nhẹ</option>
+                    <option>Trung bình</option>
+                    <option>Nặng</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="card">
+            <legend class="fieldset-legend"><span>3.</span> Tiền sử &amp; thuốc đang dùng</legend>
+            <div class="grid gap-4">
+              <div>
+                <label class="field-label" for="tien_su">Tiền sử bệnh</label>
+                <textarea class="field-input" id="tien_su" name="tien_su" rows="2" placeholder="Bệnh mạn tính, phẫu thuật, bệnh gia đình..."></textarea>
+              </div>
+              <div class="grid gap-4 sm:grid-cols-2">
+                <div>
+                  <label class="field-label" for="di_ung">Dị ứng thuốc / thức ăn</label>
+                  <input class="field-input" id="di_ung" name="di_ung" type="text" placeholder="Nếu có" />
+                </div>
+                <div>
+                  <label class="field-label" for="thuoc_dang_dung">Thuốc đang dùng</label>
+                  <input class="field-input" id="thuoc_dang_dung" name="thuoc_dang_dung" type="text" placeholder="Nếu có" />
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="card">
+            <legend class="fieldset-legend"><span>4.</span> Thông tin theo Y học cổ truyền</legend>
+            <p class="mb-4 text-sm text-brand-600">Giúp lương y biện chứng chính xác hơn (không bắt buộc).</p>
+            <div class="grid gap-4 sm:grid-cols-2">
+              <div>
+                <label class="field-label" for="an_uong">Ăn uống</label>
+                <select class="field-input" id="an_uong" name="an_uong">
+                  <option value="">-- Chọn --</option>
+                  <option>Bình thường</option>
+                  <option>Kém ăn</option>
+                  <option>Ăn nhiều mau đói</option>
+                  <option>Đầy bụng, khó tiêu</option>
+                </select>
+              </div>
+              <div>
+                <label class="field-label" for="giac_ngu">Giấc ngủ</label>
+                <select class="field-input" id="giac_ngu" name="giac_ngu">
+                  <option value="">-- Chọn --</option>
+                  <option>Ngủ tốt</option>
+                  <option>Khó vào giấc</option>
+                  <option>Ngủ chập chờn, hay mơ</option>
+                  <option>Mất ngủ</option>
+                </select>
+              </div>
+              <div>
+                <label class="field-label" for="dai_tieu_tien">Đại / tiểu tiện</label>
+                <select class="field-input" id="dai_tieu_tien" name="dai_tieu_tien">
+                  <option value="">-- Chọn --</option>
+                  <option>Bình thường</option>
+                  <option>Táo bón</option>
+                  <option>Tiêu lỏng</option>
+                  <option>Tiểu đêm nhiều</option>
+                </select>
+              </div>
+              <div>
+                <label class="field-label" for="mo_hoi">Mồ hôi</label>
+                <select class="field-input" id="mo_hoi" name="mo_hoi">
+                  <option value="">-- Chọn --</option>
+                  <option>Bình thường</option>
+                  <option>Ra nhiều mồ hôi</option>
+                  <option>Đổ mồ hôi trộm (ban đêm)</option>
+                  <option>Ít ra mồ hôi</option>
+                </select>
+              </div>
+              <div class="sm:col-span-2">
+                <label class="field-label" for="han_nhiet">Cảm giác hàn / nhiệt</label>
+                <select class="field-input" id="han_nhiet" name="han_nhiet">
+                  <option value="">-- Chọn --</option>
+                  <option>Bình thường</option>
+                  <option>Sợ lạnh, tay chân lạnh</option>
+                  <option>Sợ nóng, hay khát</option>
+                  <option>Lúc nóng lúc lạnh</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="card">
+            <legend class="fieldset-legend"><span>5.</span> Thông tin bổ sung</legend>
+            <div class="grid gap-4">
+              <div>
+                <label class="field-label" for="mo_ta_them">Mô tả thêm</label>
+                <textarea class="field-input" id="mo_ta_them" name="mo_ta_them" rows="3" placeholder="Điều bạn muốn phòng khám lưu ý thêm..."></textarea>
+              </div>
+              <div class="grid gap-4 sm:grid-cols-2">
+                <div>
+                  <label class="field-label" for="ngay_hen">Ngày mong muốn khám</label>
+                  <input class="field-input" id="ngay_hen" name="ngay_hen" type="date" />
+                </div>
+                <div>
+                  <label class="field-label" for="gio_hen">Giờ mong muốn</label>
+                  <input class="field-input" id="gio_hen" name="gio_hen" type="time" />
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="card">
+            <label class="flex items-start gap-3 text-sm text-brand-700">
+              <input type="checkbox" name="dong_y" required class="mt-1 h-4 w-4 rounded border-brand-300 text-brand-600 focus:ring-brand-400" />
+              <span class="field-required">Tôi đồng ý cung cấp thông tin trên cho phòng khám để phục vụ việc tư vấn và khám chữa bệnh.</span>
+            </label>
+            <div class="mt-6 flex flex-wrap items-center gap-4">
+              <button type="submit" id="submit-btn" class="btn-primary">Gửi khai bệnh</button>
+              <button type="reset" class="btn-outline">Nhập lại</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-brand-100 bg-white">
+    <div class="container-narrow grid gap-8 py-12 sm:grid-cols-2 lg:grid-cols-3">
+      <div>
+        <div class="flex items-center gap-3">
+          <img src="assets/img/logo.svg" alt="Logo Tâm Đức" class="h-9 w-9" />
+          <span class="font-serif text-lg font-bold text-brand-800">YHCT Tâm Đức</span>
+        </div>
+        <p class="mt-3 text-sm text-brand-600">Phòng khám Y học cổ truyền — chăm sóc sức khỏe bằng phương pháp Đông y an toàn, tận tâm.</p>
+      </div>
+      <div>
+        <h3 class="text-sm font-semibold uppercase tracking-wide text-brand-800">Liên hệ</h3>
+        <ul class="mt-3 space-y-2 text-sm text-brand-600">
+          <li>📍 [[Địa chỉ phòng khám]]</li>
+          <li>📞 <a href="tel:[[SODT]]" class="hover:text-brand-800">[[Số điện thoại]]</a></li>
+          <li>✉️ <a href="mailto:[[EMAIL]]" class="hover:text-brand-800">[[email@phongkham.vn]]</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-sm font-semibold uppercase tracking-wide text-brand-800">Giờ làm việc</h3>
+        <ul class="mt-3 space-y-1 text-sm text-brand-600">
+          <li>Thứ 2 – Thứ 7: [[7:30 – 20:00]]</li>
+          <li>Chủ nhật: [[7:30 – 12:00]]</li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-brand-100 py-4 text-center text-xs text-brand-500">
+      © <span data-year>2026</span> YHCT Tâm Đức. Bảo lưu mọi quyền.
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/khai-benh.js"></script>
+</body>
+</html>

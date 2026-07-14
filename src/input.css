@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-brand-50 text-brand-900 font-sans antialiased;
+  }
+  h1, h2, h3 {
+    @apply font-serif text-brand-800;
+  }
+}
+
+@layer components {
+  .container-narrow {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-brand-600 px-6 py-3
+           text-sm font-semibold text-white shadow-sm transition hover:bg-brand-700
+           focus:outline-none focus:ring-2 focus:ring-brand-400 focus:ring-offset-2;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-brand-600 px-6 py-3
+           text-sm font-semibold text-brand-700 transition hover:bg-brand-600 hover:text-white
+           focus:outline-none focus:ring-2 focus:ring-brand-400 focus:ring-offset-2;
+  }
+
+  .card {
+    @apply rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-100;
+  }
+
+  .section {
+    @apply py-16 sm:py-20;
+  }
+
+  .section-title {
+    @apply text-3xl font-bold sm:text-4xl;
+  }
+
+  .eyebrow {
+    @apply mb-2 inline-block text-sm font-semibold uppercase tracking-wider text-accent;
+  }
+
+  .nav-link {
+    @apply rounded-md px-3 py-2 text-sm font-medium text-brand-700 transition hover:bg-brand-100 hover:text-brand-900;
+  }
+
+  /* Form controls */
+  .field-label {
+    @apply mb-1 block text-sm font-medium text-brand-800;
+  }
+  .field-required::after {
+    content: " *";
+    @apply text-red-500;
+  }
+  .field-input {
+    @apply block w-full rounded-lg border border-brand-200 bg-white px-3 py-2 text-sm text-brand-900
+           shadow-sm transition placeholder:text-brand-300
+           focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-200;
+  }
+  .field-error {
+    @apply mt-1 hidden text-xs text-red-600;
+  }
+  .field-input.invalid {
+    @apply border-red-400 focus:border-red-500 focus:ring-red-200;
+  }
+  .field-input.invalid + .field-error {
+    @apply block;
+  }
+
+  .fieldset-legend {
+    @apply mb-4 flex items-center gap-2 text-lg font-semibold text-brand-700;
+  }
+}
