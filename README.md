@@ -1,6 +1,6 @@
-# Website YHCT Tâm Đức
+# Website Minh Sanh Đường
 
-Trang web tĩnh cho phòng khám **Y học cổ truyền Tâm Đức**, xây dựng bằng HTML + [Tailwind CSS](https://tailwindcss.com/). Có thể triển khai miễn phí trên **GitHub Pages**.
+Trang web tĩnh cho phòng khám **Y học cổ truyền Minh Sanh Đường**, xây dựng bằng HTML + [Tailwind CSS](https://tailwindcss.com/). Có thể triển khai miễn phí trên **GitHub Pages**.
 
 ## Các trang
 

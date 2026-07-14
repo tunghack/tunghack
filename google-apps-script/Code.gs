@@ -1,5 +1,5 @@
 /**
- * YHCT Tâm Đức — nhận dữ liệu từ phiếu "Khai bệnh".
+ * Minh Sanh Đường — nhận dữ liệu từ phiếu "Khai bệnh".
  *
  * Chức năng: mỗi lần bệnh nhân gửi phiếu, script sẽ
  *   1) ghi một dòng mới vào Google Sheet, và
@@ -16,7 +16,7 @@
  */
 
 // Email nhận thông báo khai bệnh — ĐỔI thành email thật của phòng khám.
-var CLINIC_EMAIL = 'email@phongkham.vn';
+var CLINIC_EMAIL = 'minhcyk@gmail.com';
 
 // Tên tab (sheet) sẽ lưu dữ liệu. Script tự tạo nếu chưa có.
 var SHEET_NAME = 'KhaiBenh';
