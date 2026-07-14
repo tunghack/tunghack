@@ -1,7 +1,7 @@
 {
   "name": "yhct-tamduc",
   "version": "1.0.0",
-  "description": "Website phòng khám Y học cổ truyền Tâm Đức (static + Tailwind CSS)",
+  "description": "Website phòng khám Y học cổ truyền Minh Sanh Đường (static + Tailwind CSS)",
   "private": true,
   "scripts": {
     "build": "tailwindcss -i ./src/input.css -o ./assets/css/style.css --minify",
