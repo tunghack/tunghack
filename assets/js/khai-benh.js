@@ -7,7 +7,7 @@
   // 1) Paste the Web App URL you get after deploying google-apps-script/Code.gs.
   //    See README.md → "Kết nối form với Google Sheet & Email".
   // ---------------------------------------------------------------------------
-  var APPS_SCRIPT_URL = 'PASTE_YOUR_APPS_SCRIPT_WEB_APP_URL_HERE';
+  var APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxonomBnCFFloIV539uxcdjqDTmIpArOYjiQA2DkUC7gsvG_0YM6zBH8jayFVeI7O1VlQ/exec';
 
   var form = document.getElementById('khai-benh-form');
   if (!form) return;
@@ -75,11 +75,10 @@
     submitBtn.textContent = 'Đang gửi...';
     showStatus('info', 'Đang gửi thông tin khai bệnh, vui lòng chờ...');
 
-    fetch(APPS_SCRIPT_URL, { method: 'POST', body: data })
-      .then(function (res) {
-        if (!res.ok) throw new Error('HTTP ' + res.status);
-        return res.text();
-      })
+    // Apps Script doesn't send CORS headers, so we can't read the response.
+    // 'no-cors' still delivers the POST (the script runs and emails); we treat
+    // a resolved fetch as success. A network failure rejects -> error message.
+    fetch(APPS_SCRIPT_URL, { method: 'POST', body: data, mode: 'no-cors' })
       .then(function () {
         form.reset();
         showStatus(
