@@ -35,4 +35,14 @@
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
   }
+
+  // Floating quick-contact buttons (Zalo + gọi điện) on every page.
+  var fab = document.createElement('div');
+  fab.className = 'fixed bottom-5 right-5 z-50 flex flex-col items-center gap-3';
+  fab.innerHTML =
+    '<a href="https://zalo.me/0919666115" target="_blank" rel="noopener" aria-label="Nhắn Zalo" ' +
+    'class="flex h-12 w-12 items-center justify-center rounded-full bg-brand-600 text-xs font-bold text-white shadow-lg ring-2 ring-white transition hover:bg-brand-700">Zalo</a>' +
+    '<a href="tel:0919666115" aria-label="Gọi điện" ' +
+    'class="flex h-12 w-12 items-center justify-center rounded-full bg-accent text-xl text-white shadow-lg ring-2 ring-white transition hover:opacity-90">☎️</a>';
+  document.body.appendChild(fab);
 })();

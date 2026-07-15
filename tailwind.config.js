@@ -6,17 +6,17 @@ module.exports = {
       colors: {
         // Jade / traditional-medicine palette — change these to rebrand.
         brand: {
-          50: '#eef7f2',
-          100: '#d6ecdf',
-          200: '#aed9c0',
-          300: '#7dbf9c',
-          400: '#4fa078',
-          500: '#2f8560',
-          600: '#226a4c',
-          700: '#1c543d',
-          800: '#184433',
-          900: '#12332680',
-          DEFAULT: '#226a4c',
+          50: '#eef8fb',
+          100: '#d0edf3',
+          200: '#a6dbe7',
+          300: '#71c2d5',
+          400: '#3ba3bd',
+          500: '#2286a1',
+          600: '#186b86',
+          700: '#17566d',
+          800: '#17475a',
+          900: '#123a49',
+          DEFAULT: '#186b86',
         },
         accent: {
           DEFAULT: '#c0873f',
