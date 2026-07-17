@@ -24,7 +24,7 @@
  */
 
 // Email nhận thông báo khai bệnh — ĐỔI thành email thật của phòng khám.
-var CLINIC_EMAIL = 'tuminhcyk@gmail.com';
+var CLINIC_EMAIL = 'minhcyk@gmail.com';
 
 // Tên tab (sheet) sẽ lưu dữ liệu. Script tự tạo nếu chưa có.
 var SHEET_NAME = 'KhaiBenh';
