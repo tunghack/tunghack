@@ -7,7 +7,7 @@
   // 1) Paste the Web App URL you get after deploying google-apps-script/Code.gs.
   //    See README.md → "Kết nối form với Google Sheet & Email".
   // ---------------------------------------------------------------------------
-  var APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw3NVflTFlQwAmmkf0Ida99Cc7ZHpj6s6YVtipQB1kB-fJu9vM4fY1AGoMAv9Q0Bjjg/exec';
+  var APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzYYgxvT8uMnEmIZ6yA9AEKMw9eh814zbki0RznR6c6i4Nd7dHcUbDVhFKlI0cHD8xU/exec';
 
   var form = document.getElementById('khai-benh-form');
   if (!form) return;
